@@ -38,9 +38,9 @@ body{
 }
 .header{
 	position: relative;
-	padding: 55px 0 0 0;
+	padding: 55px 0 ;
 	background: url('../img/header/header_bg.jpg') center no-repeat;
-	background-size: cover;
+	
 	&:before{
 		content: '';
 		position: absolute;
