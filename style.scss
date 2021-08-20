@@ -1,0 +1,246 @@
+@import "_null";
+
+@font-face {
+	font-family: 'Segoe WP';
+	src: url('../fonts/Segoe WP Light.eot');
+	src: local('☺'), url('..fonts/Segoe WP Light.woff') format('woff'), url('../fonts/Segoe WP Light.ttf') format('truetype'), url('../fonts/Segoe WP Light.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Segoe WP';
+	src: url('../fonts/Segoe WP Semibold.eot');
+	src: local('☺'), url('../fonts/Segoe WP Semibold.woff') format('woff'), url('../fonts/Segoe WP Semibold.ttf') format('truetype'), url('../fonts/Segoe WP Semibold.svg') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Univers CE';
+	src: url('../fonts/Univers CE 45 Light.eot');
+	src: local('☺'), url('../fonts/Univers CE 45 Light.woff') format('woff'), url('../fonts/Univers CE 45 Light.ttf') format('truetype'), url('../fonts/Univers CE 45 Light.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+body{
+	font-family: 'Segoe WP';
+	font-weight: 300;
+	@media (max-width:767px) {
+		&.lock{
+			overflow: hidden;
+		}
+	}
+} 
+.container{
+	max-width:1044px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.header{
+	position: relative;
+	padding: 55px 0 ;
+	background: url('../img/header/header_bg.jpg') center no-repeat;
+	
+	&:before{
+		content: '';
+		position: absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		background: url('../img/header/header_bg-overlay.png') no-repeat;
+		background-size: cover;
+		z-index: 1;
+	}
+	&__head{
+		position: relative;
+		z-index: 2;
+		display: flex;
+		justify-content: space-around;
+		margin: 0 0 68px 0;
+	}
+ 
+	&__logo img{
+		width: 100%;
+	}
+	&__list{
+		display: flex;
+		li{
+			margin: 0 26px;
+		}
+	}
+	&__link{
+		color:#fff;
+		font-size: 22.63px;
+	}
+	&__body{
+		position: relative;
+		z-index: 1;
+	}
+	&__slider{
+		position: relative;
+		.slick-list{
+			overflow: hidden;
+		}
+		.slick-track{
+			display: flex;
+			justify-content: space-between;
+		}
+		.slick-arrow{
+			position: absolute;
+			top:25%;
+			font-size: 0;
+			z-index: 5;
+			width: 50px;
+			height: 50px;
+		}
+		.slick-arrow.slick-prev{
+			background: url('../img/header/arrow-prev.png') no-repeat;
+			left:-72px;
+			@media(max-width: 1180px){
+					left:0;
+			}
+		}
+		.slick-arrow.slick-next{
+			right: -72px;
+			background: url('../img/header/arrow-next.png') no-repeat;
+			@media(max-width: 1180px){
+					right:0;
+			}
+		}
+		.item-slider{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&__icon{
+				margin: 0 75px 0 0;
+				img{
+					width: 100%;
+				}
+			}
+			&__title,&__subtitle,&__btn{
+				color:#fff;
+			}
+			&__title{
+				font-size: 64.63px;
+				font-weight: 600;
+				margin: 0 0 20px 0;
+			}
+			&__subtitle{
+				font-size: 44.63px;
+				margin: 0 0 30px 0;
+			}
+			&__btn{
+				display: inline-flex;
+				width: 138px;
+				height: 38px;
+				justify-content: center;
+				align-items: center;
+				font-size: 22.63px;
+				background: #2b7552;
+				text-transform: capitalize;
+			}
+			@media(max-width: 900px){
+				flex-direction: column;
+				text-align: center;
+				&__icon{
+					margin: 0 0 0 0;
+				}
+				&__title{
+					font-size: 48px;
+				}
+				&__subtitle{
+					font-size: 36px;
+				}
+			}
+			@media(max-width: 767px){
+				&__title{
+					font-size: 32px;
+				}
+				&__subtitle{
+					font-size: 27px;
+				}
+			}
+			@media(max-width: 500px){
+				&__icon{
+					img{
+						width:50%;
+					}
+				}
+			}
+		}
+	}
+	@media(max-width: 767px){
+		&__head{
+			justify-content: space-between;
+			align-items: center;
+		}
+		&__logo{
+			flex:0 0 160px;
+		}
+		&__burger{
+			display: block;
+			position: relative;
+			z-index: 5;
+			width:30px;
+			height: 20px;
+			&:before,
+			&:after{
+				content:'';
+				background: #fff;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				left:0;
+				transition: all 0.3s ease 0s;
+			}
+			span{
+				position: absolute;
+				background: #fff;
+				left:0;
+				width: 100%;
+				height: 2px;
+				top:9px;
+				transition: all 0.3s ease 0s;
+			}
+			&:before{
+				top:0;
+			}
+			&:after{
+				bottom:0;
+			}
+			&.active span{
+				transform: scale(0);
+			}
+			&.active:before{
+				transform: rotate(45deg);
+				top:9px;
+			}
+			&.active:after{
+				transform: rotate(-45deg);
+				bottom: 9px;
+			}
+		}
+		&__list{
+			display: block;
+			li{
+				margin: 0 0 20px 0;
+			}
+		}
+		&__menu{
+			position: fixed;
+			top:-100%;
+			left:0;
+			width: 100%;
+			height: 100%;
+			background: #999;
+			padding: 100px 20px 10px;
+			transition: all 0.3s ease 0s;
+			overflow:auto;
+			&.active{
+				top:0;
+			}
+		}
+	}
+}
+
