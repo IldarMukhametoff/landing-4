@@ -114,7 +114,7 @@ body {
 
 .header {
   position: relative;
-  padding: 55px 0 0 0;
+  padding: 55px 0;
   background: url("../img/header/header_bg.jpg") center no-repeat;
   background-size: cover;
 }
@@ -381,5 +381,163 @@ body {
   }
   .header__menu.active {
     top: 0;
+  }
+}
+
+.tabs {
+  color: #5c5b5b;
+}
+
+.tabs__body {
+  border: 1px solid #dedede;
+  padding: 70px 0;
+}
+
+.tabs-triggers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tabs-triggers__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  padding: 26px 18px 53px;
+  border-bottom: 1px solid #dedede;
+  color: #5c5b5b;
+}
+
+.tabs-triggers__item.active {
+  border: 1px solid #dedede;
+  border-bottom: none;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .tabs-triggers__item {
+    padding: 13px 9px 26px;
+  }
+}
+
+@media (max-width: 500px) {
+  .tabs-triggers__item {
+    padding: 13px 0 26px;
+  }
+}
+
+.tabs-triggers__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 22px 0;
+}
+
+.tabs-triggers__img img {
+  width: 62.29%;
+}
+
+.tabs-triggers__title {
+  font-size: 26.63px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .tabs-triggers__title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .tabs-triggers__title {
+    font-size: 12px;
+  }
+}
+
+.tabs-content {
+  padding: 58px 90px 0;
+}
+
+.tabs-content__item {
+  display: none;
+}
+
+.tabs-content__item.active {
+  display: block;
+}
+
+.tabs-content__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 60px 0;
+}
+
+.tabs-content__img img {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .tabs-content__img {
+    margin: 0 0 30px 0;
+  }
+}
+
+.tabs-content__title {
+  font-size: 38.63px;
+  margin: 0 0 30px 0;
+}
+
+@media (max-width: 767px) {
+  .tabs-content__title {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs-content__title {
+    font-size: 16px;
+  }
+}
+
+.tabs-content__text {
+  font-size: "Univers CE";
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.tabs-content__text p {
+  margin: 0 0 36px 0;
+}
+
+.tabs-content__text p:last-child {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .tabs-content__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tabs-content {
+    padding: 27px 45px 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .tabs-content {
+    padding: 20px 10px 0;
   }
 }
